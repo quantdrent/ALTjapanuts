@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d7c49a">
+  <meta name="description" content="Explore eight periods of Japanese history through art. An interactive Eastern Art Review project.">
+  <title>Eastern art review test</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="assets/kucingcina0.png">
+  <link rel="preload" as="image" href="assets/kucingcina1.png">
+  <link rel="preload" as="image" href="assets/ClockBase.png">
+  <link rel="preload" as="image" href="assets/ClockHour.png">
+  <link rel="preload" as="image" href="assets/ClockMin.png">
+  <link rel="preload" as="image" href="assets/ClockSec.png">
+  <link rel="stylesheet" href="style.css?v=20261109d">
+  <script src="app.js?v=20261109b" defer></script>
+  <script src="article-wash.js?v=20261109b" defer></script>
+  <script src="crt.js?v=20261109b" defer></script>
+  <script src="fx.js?v=20261109b" defer></script>
+  <script src="warp.js?v=20261109b" defer></script>
+  <script src="clock.js?v=20261109d" defer></script>
+</head>
+<body>
+<a class="skip" href="#period-grid">Skip to periods</a>
+<main class="room" id="room" aria-label="A vintage computer on a wooden table in a Japanese room">
+  <div class="room-layer layer-room" aria-hidden="true"></div>
+  <div class="room-layer layer-calendar" aria-hidden="true"></div>
+  <div class="room-layer layer-clock" aria-hidden="true">
+    <div class="wall-clock" id="wall-clock" role="img" aria-label="Analog wall clock">
+      <div class="clock-face"></div>
+      <div class="clock-hand clock-hour" id="clock-hour"></div>
+      <div class="clock-hand clock-min" id="clock-min"></div>
+      <div class="clock-hand clock-sec" id="clock-sec"></div>
+    </div>
+  </div>
+  <div class="room-layer layer-cableft" aria-hidden="true"></div>
+  <div class="room-layer layer-artifact" aria-hidden="true"></div>
+  <div class="room-layer layer-cabright" aria-hidden="true"></div>
+  <div class="room-layer layer-neko" aria-hidden="true"></div>
+  <div class="room-layer layer-vase" aria-hidden="true"></div>
+  <div class="room-layer layer-teapot" aria-hidden="true"></div>
+  <div class="desk-layer" aria-hidden="true"></div>
+  <div class="computer">
+    <div class="monitor">
+      <div class="socket" id="socket">
+        <section class="screen crt-enabled" id="screen" aria-label="Japanese history portal">
+          <div class="portal" id="portal">
+            <header class="masthead">
+              <h1><a class="wordmark" href="#" aria-label="Japanese history home">JAPANESE HISTORY</a></h1>
+            </header>
+            <nav class="nav" aria-label="Main navigation"><a href="#" class="current" id="home-link">HOME</a><button type="button" id="info-button" aria-expanded="false" aria-controls="info-window">CREDITS</button></nav>
+            <div class="news"><b>Fumo</b><div class="ticker" aria-label="Pick a Period. Cool Artifacts."><div class="ticker-track" aria-hidden="true"><span>Pick a Period <i>///</i> Cool Artifacts <i>///</i></span><span>Pick a Period <i>///</i> Cool Artifacts <i>///</i></span><span>Pick a Period <i>///</i> Cool Artifacts <i>///</i></span><span>Pick a Period <i>///</i> Cool Artifacts <i>///</i></span></div></div></div>
+            <div class="hero-banner" aria-hidden="true">
+              <div class="hero-copy">
+                <span class="hero-kicker">ERA ARCHIVE</span>
+                <h2>JOMON TO EDO</h2>
+                <span class="hero-sub">14,000 BCE – 1868 CE</span>
+              </div>
+              <div class="shock-burst"><strong>8</strong><span>ERAS</span></div>
+            </div>
+            <div class="period-grid" id="period-grid" tabindex="-1" aria-label="Historical periods"></div>
+            <section class="info-window" id="info-window" hidden aria-labelledby="info-title">
+              <header class="info-titlebar">
+                <h2 id="info-title" tabindex="-1">CREDITS</h2>
+                <button type="button" id="info-close" aria-label="Close credits">×</button>
+              </header>
+              <div class="credits-body">
+                <div class="info-names">
+                  <p><span>Orlean Alvaro Gumilar</span><small>3002859241</small></p>
+                  <p id="credit-hirobhumi" class="credit-hirobhumi"><span>Hirobhumi Ishak</span><small>3002783515</small></p>
+                  <p><span>Chelson Law</span><small>3002804242</small></p>
+                  <p><span>Jendra Fazlirasyad Daniswara</span><small>3002762643</small></p>
+                  <p><span>Cannavaro Lie</span><small>3002817182</small></p>
+                </div>
+                <div class="puppet-stage" aria-hidden="true">
+                  <div class="puppet-track puppet-one"><div class="puppet-facing"><img src="assets/puppets/samurai-1-transparent.png?v=python" alt="" width="595" height="842" decoding="async" draggable="false"></div></div>
+                  <div class="puppet-track puppet-two"><div class="puppet-facing"><img src="assets/puppets/samurai-2-transparent.png?v=python" alt="" width="595" height="842" decoding="async" draggable="false"></div></div>
+                  <div class="puppet-track puppet-three"><div class="puppet-facing"><img src="assets/puppets/samurai-3-transparent.png?v=python" alt="" width="595" height="842" decoding="async" draggable="false"></div></div>
+                </div>
+              </div>
+            </section>
+            <footer><span>Eastern Art Review</span></footer>
+          </div>
+          <div class="connection" id="connection" hidden aria-live="polite"><div class="connection-window"><div class="connection-title"><span>OPENING DOCUMENT</span><span aria-hidden="true">_ □</span></div><div class="connection-body"><span class="hourglass" aria-hidden="true">⌛</span><div><b id="connection-name">Opening period...</b><span>Eastern Art Review</span></div></div><div class="connection-track"><div id="connection-progress"></div></div><div class="connection-status">Please wait<span id="connection-percent">0%</span></div></div></div>
+          <section class="selection" id="selection" hidden tabindex="-1" aria-label="Period page">
+            <canvas class="scroll-bg" id="scroll-bg" aria-hidden="true"></canvas>
+            <div class="period-page">
+              <button class="return" type="button" id="return">← back</button>
+              <header class="period-header">
+                <p class="period-kicker" id="period-kicker">DOGŪ FIGURINE · PREHISTORIC, ENDING C. 300 BCE</p>
+                <h2 class="period-title" id="period-title">Jōmon</h2>
+                <p class="period-sub" id="period-sub">Foraging and pottery</p>
+              </header>
+              <div class="period-body" id="period-body"></div>
+            </div>
+          </section>
+          <div class="crt-glass" aria-hidden="true"></div><div class="crt-grain" aria-hidden="true"></div><div class="crt-scan" aria-hidden="true"></div>
+        </section>
+      </div>
+      <div class="case-controls"><span class="switch" aria-hidden="true"></span><button type="button" class="power-light" id="power-button" aria-pressed="true" aria-label="Toggle monitor power"></button></div>
+    </div><div class="neck" aria-hidden="true"></div><div class="foot" aria-hidden="true"></div>
+  </div>
+</main>
+<div id="zoom-stage" class="zoom-stage" hidden></div>
+<audio id="landing-audio" src="assets/Audio/Backgroundsoundlanding.mp3" loop preload="auto"></audio>
+<audio id="article-audio" loop preload="none"></audio>
+<audio id="sfx-mouse" src="assets/Audio/click-mouse.mp3" preload="auto"></audio>
+<audio id="sfx-loading" src="assets/Audio/LoadingLandingpage.mp3" preload="auto"></audio>
+<audio id="sfx-obesity" src="assets/Audio/obesity.mp3" preload="auto"></audio>
+</body>
+</html>
